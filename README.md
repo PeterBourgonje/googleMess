@@ -2,6 +2,9 @@
 A naive attempt to obscure the profile Google is constructing based on your search terms and clicked results.
 
 
+
+
+
 DESCRIPTION:
 Google is constructing a profile of its users based on a.o. search queries. In an attempt to anonimize your profile, this little script loads a text file, extracts some random search terms, queries google and randomly clicks some results.
 Doing automated calls in this way probably conflicts with Google's Terms and Conditions. In addition, I assume that their analytics are good enough to be able to detect this sort of non-human behavior. 
