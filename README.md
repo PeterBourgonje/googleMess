@@ -1,2 +1,20 @@
 # googleMess
 A naive attempt to obscure the profile Google is constructing based on your search terms and clicked results.
+
+
+DESCRIPTION:
+Google is constructing a profile of its users based on a.o. search queries. In an attempt to anonimize your profile, this little script loads a text file, extracts some random search terms, queries google and randomly clicks some results.
+Doing automated calls in this way probably conflicts with Google's Terms and Conditions. In addition, I assume that their analytics are good enough to be able to detect this sort of non-human behavior. 
+Therefore, this is merely an experiment and this repository mostly for archiving purposes.
+
+INSTALLATION AND USAGE:
+To run, install python2.x and install mechanize (easiest way: 'pip install mechanize' (select 'pip' during installation of python)).
+Usage:
+py27googleMess.py -t <text_file>.
+Text file can be about anything that you want Google to think you're interested in. Search terms are extracted from this text file at random. 
+
+To simulate your own behavior as much as possible, look for this line in the code:
+userAgent = 'Mozilla/5.0 (Windows NT 6.1; WOW64; rv:36.0) Gecko/20100101 Firefox/36.0'
+Go to http://whatsmyuseragent.com/ and specify your own user agent string before running the script.
+
+To automate your experiment (e.g. running this script on a regular basis to see if you see any change in your search results in Google), I have set this up as a scheduled task in Windows task scheduler. (Hint; doing this with the SYSTEM user allows you to run it in the background, so you don't see the command prompt pop up every time it runs.)
